@@ -1,0 +1,30 @@
+# protected_checksums — DO NOT EDIT manually
+# Standard: Operator Autonomous OS Agent Standard V2
+# Algorithm: MD5
+# Generated: 2026-06-23
+#
+# These files are stable. Any intentional change requires:
+#   1. Update MANIFEST.md (bump version, note the change)
+#   2. Run A1→A9 golden test suite and confirm pass
+#   3. Regenerate this file:
+#      PowerShell: Get-FileHash -Algorithm MD5 <file> | Select Hash
+#
+# Active pipeline files only.
+# Legacy folders removed 2026-06-23 — see pipeline/LEGACY.md
+
+f09a5a62641c39c0e40279b0afb94e5c  shared_core/__init__.py
+40ca7a838e5b41274f77e9eabf59fe66  shared_core/database.py
+0f1a31da46440272217c121d095e650f  shared_core/llm_provider.py
+20b157ad44e30da7cfe8a57754d4a057  shared_core/logger.py
+e7eb30a8760f356ab95a2a22457f4d31  shared_core/telegram_base.py
+27929841a20c3fe347022ecfd74a75ed  pipeline/orchestrator/runner.py
+8408773c99a32e5058acf3375ae2270a  pipeline/a1_market_scanner/scanner.py
+2c822f7bf38e82c757589c5eb4087533  pipeline/a2_pain_analyzer/analyzer.py
+e33b946c9933f931ff5f3645781a0981  pipeline/a3_blueprint_writer/writer.py
+92478a95feb81cd611884716172119f0  pipeline/a4_bot_builder/builder.py
+4068c965eeda1c916dbfd371a71966b3  pipeline/a5_quality_gates/orchestrator.py
+80a21c9ab9c3a3afe9a0843a6bfbf7b8  pipeline/a6_deployer/deployer.py
+88a438da743466dd7663c6d2267b8bd3  pipeline/a7_ops_worker/ops_worker.py
+6610a199b7808c7db7917d69e5c3b6f3  pipeline/a8_packager/packager.py
+9f52ede3931e767a11041b7e0dd27fd1  pipeline/a9_marketplace/publisher.py
+89127101e6042f27a6b5ba7a99b1bc48  MANIFEST.md

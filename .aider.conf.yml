@@ -1,0 +1,4 @@
+# Aider config — Factory A
+model: ollama/deepseek-r1:7b
+no-auto-commits: true
+dark-mode: true

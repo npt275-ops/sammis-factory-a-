@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!--
+  Task Scheduler XML - CEO Bot Auto-Start
+
+  Preferred install path:
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\install_ceo_bot_autostart.ps1
+
+  This XML is kept as a readable fallback. The action runs the supervisor
+  directly so Task Scheduler can monitor the long-lived process.
+-->
+<Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Description>Auto-start Factory A CEO Bot supervisor at Windows logon.</Description>
+    <Author>Sammis</Author>
+  </RegistrationInfo>
+  <Triggers>
+    <LogonTrigger>
+      <Enabled>true</Enabled>
+      <Delay>PT30S</Delay>
+    </LogonTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id="Author">
+      <UserId>ADMINN</UserId>
+      <LogonType>InteractiveToken</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>
+    <Priority>7</Priority>
+    <RestartOnFailure>
+      <Interval>PT5M</Interval>
+      <Count>3</Count>
+    </RestartOnFailure>
+  </Settings>
+  <Actions>
+    <Exec>
+      <Command>powershell.exe</Command>
+      <Arguments>-NoProfile -ExecutionPolicy Bypass -File "D:\Sammis Autonomous OS\factory_a\scripts\ceo_bot_runtime.ps1"</Arguments>
+      <WorkingDirectory>D:\Sammis Autonomous OS\factory_a</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>

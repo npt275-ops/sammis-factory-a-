@@ -1,0 +1,49 @@
+# Environment
+.env
+.env.local
+.env.*.local
+run_ceo_bot.bat
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+logs/
+*.log
+
+# Local runtime data / databases (may contain local paths, PIDs, business data)
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Output
+output/
+!output/.gitkeep
+*.zip
+*_listing.json
+listing.json
+
+# Generated temp/probe files
+*.tmp.*
+README.md.tmp.*
+TODO.md.tmp.*
+autostart_task.xml
+fix_bot_strings.py
+patch_db.py
+
+# OS
+.DS_Store
+Thumbs.db

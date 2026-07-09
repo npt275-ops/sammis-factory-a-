@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "factory-a"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "Sammis Autonomous OS — Factory A product pipeline"
+
+[tool.setuptools.packages.find]
+where = [".."]
+include = ["factory_a*"]
+
+[tool.pytest.ini_options]
+pythonpath = [".."]
+norecursedirs = ["output", ".git", ".venv", "venv", "__pycache__"]
