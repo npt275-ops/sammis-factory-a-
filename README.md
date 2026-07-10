@@ -385,7 +385,7 @@ Core variables:
 | `TELEGRAM_ERROR_CHAT_ID` | notifications | Optional | Error notification chat |
 | `SUPABASE_URL` | shared core | Yes for shared config | Cloud backup/remote storage |
 | `SUPABASE_KEY` | shared core | Yes for shared config | Supabase API key |
-| `OLLAMA_BASE_URL` | LLM provider | Yes for shared config | Usually `http://localhost:11434` |
+| `OLLAMA_BASE_URL` | LLM provider | Yes for shared config | Usually `` |
 | `GROQ_API_KEY` | LLM fallback | Optional | Cloud fallback |
 | `GEMINI_API_KEY` | LLM fallback | Optional | Cloud fallback |
 | `CLAUDE_API_KEY` / `ANTHROPIC_API_KEY` | LLM/codegen scripts | Optional/flow-dependent | Naming is not fully unified in the repo |
